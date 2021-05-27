@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+            <input type='button' value="123" v-on:click="dolt"> 
+            <input type='button' value="123" v-on:monseenter="dolt"> 
+            <!-- <input type='button' value="123" v-on:dblclick="dolt">  -->
+            <input type='button' value="123" @dblclick="dolt"> 
+            <h2 @click='changefood'>{{food}}</h2>
+        
+    </div>
+    <script  src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data:{
+                food:'xilanhua',
+            },
+            methods:{
+                dolt:function(){
+                    console.log(123)
+                    alert(123)
+                },
+                changefood:function(){
+                   
+                    console.log( this.food)
+                    this.food+='haohaoc'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

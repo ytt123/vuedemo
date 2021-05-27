@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            border : 2px solid black
+        }
+    </style>
+</head>
+<body>
+    <div id='app'>
+        <input type="button" value="123" @click='add("123")'>
+        <input type="text" value="123" @keyup.enter='add("123")'>
+       <!-- <ul>
+         <li v-for="(item,index) in arr"> {{item}}</li>
+       </ul> -->
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data:{arr:[1,12,14,13,15],location:['杭州','上海','宁波','绍兴'],objs:[{'name':'ytt'},{'name':'yttttt'}]},
+
+         methods:{
+            add:function(num){
+                // this.arr.unshift(333)
+                console.log(num);
+            },
+            sub:function(){
+
+        },
+         }
+             
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'>
+        <button @click="show">123</button>
+        <button @click="addage">123</button>
+      <img src="./src/icon.png" v-show='true'/>
+      <img src="./src/icon.png"  v-show='ishow'/>
+      <img src="./src/icon.png"  v-show='num>18'/>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data:{num:16,ishow:true},
+            methods:{
+                add:function(){
+                    console.log(this.num)
+                    if(this.num<10){
+                        this.num++
+                    }
+                },
+                sub:function(){
+                    console.log(this.num)
+                    if(this.num>0){
+                        this.num--
+                    }
+                },
+                show:function(){
+                    this.ishow=!this.ishow
+                },
+                addage:function(){
+                    this.num++
+                    console.log(this.num)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
